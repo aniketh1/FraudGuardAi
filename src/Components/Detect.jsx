@@ -27,7 +27,7 @@ const Detect = () => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/predict', data);
+      const res = await axios.post('https://fraud-guard-ai.vercel.app/api/predict', data);
       setResponse(res.data);
     } catch (err) {
       if (err.response) {
