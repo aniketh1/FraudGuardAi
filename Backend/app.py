@@ -13,7 +13,7 @@ pca = joblib.load('pca_transform.pkl')  # If PCA was applied during training
 scaler = joblib.load('scaler.pkl')      # If scaling was applied
 
 # Route to make predictions
-@app.route('/predict', methods=['POST'])
+@app.route('/api/predict', methods=['POST'])
 def predict():
     try:
         # Parse the input JSON data
